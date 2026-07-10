@@ -1,7 +1,12 @@
+import Navbar from "../components/Navbar";
+import SearchBar from "../components/SearchBar";
+
 function Home() {
   return (
-    <div className="bg-green-600 text-white text-4xl p-10">
-      Tailwind Working 🚀
+    <div className="min-h-screen bg-gray-100">
+      <Navbar />
+
+      <SearchBar />
     </div>
   );
 }
