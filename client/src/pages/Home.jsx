@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import LocationCard from "../components/LocationCard";
 import Banner from "../components/Banner";
+import Categories from "../components/Categories";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <SearchBar />
       <LocationCard />
       <Banner />
+      <Categories />
     </div>
   );
 }
