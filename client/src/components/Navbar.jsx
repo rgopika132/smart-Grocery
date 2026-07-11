@@ -1,7 +1,15 @@
-import { Bell, Menu } from "lucide-react";
+import { Bell, Menu, ShoppingCart } from "lucide-react";
 import appConfig from "../config/appConfig";
 
+import { useCart } from "../context/CartContext";
+
 function Navbar() {
+  const { cartItems } = useCart();
+
+const totalItems = cartItems.reduce(
+  (total, item) => total + item.quantity,
+  0
+);
   return (
     <nav className="flex items-center justify-between bg-white shadow-sm px-5 py-3">
 
@@ -28,8 +36,23 @@ function Navbar() {
 
       </div>
 
-      <Bell size={23} />
+      <div className="flex items-center gap-4">
 
+  <Bell size={23} />
+
+  <div className="relative cursor-pointer">
+
+    <ShoppingCart size={25} />
+
+    {totalItems > 0 && (
+      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+        {totalItems}
+      </span>
+    )}
+
+  </div>
+
+</div>
     </nav>
   );
 }

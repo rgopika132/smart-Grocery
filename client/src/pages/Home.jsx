@@ -3,6 +3,7 @@ import SearchBar from "../components/SearchBar";
 import LocationCard from "../components/LocationCard";
 import Banner from "../components/Banner";
 import Categories from "../components/Categories";
+import PopularProducts from "../components/PopularProducts";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <LocationCard />
       <Banner />
       <Categories />
+      <PopularProducts />
     </div>
   );
 }

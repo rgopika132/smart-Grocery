@@ -7,6 +7,8 @@ const categories = [
   { emoji: "🥛", title: "Dairy" },
   { emoji: "🥤", title: "Beverages" },
   { emoji: "🍪", title: "Snacks" },
+  { emoji: "🐟", title: "Fish" },
+  { emoji: "🐔🥩", title: "Meat" },
 ];
 
 function Categories() {
