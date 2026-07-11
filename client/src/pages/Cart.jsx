@@ -1,5 +1,6 @@
 import { useCart } from "../context/CartContext";
 import storeConfig from "../config/storeConfig";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   const {
@@ -7,6 +8,8 @@ export default function Cart() {
     increaseQuantity,
     decreaseQuantity,
   } = useCart();
+
+  const navigate = useNavigate();
 
   const totalAmount = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -133,15 +136,16 @@ export default function Cart() {
         )}
 
         <button
-          disabled={!eligibleForCheckout}
-          className={`mt-6 w-full py-3 rounded-xl font-semibold ${
-            eligibleForCheckout
-              ? "bg-green-600 hover:bg-green-700 text-white"
-              : "bg-gray-300 text-gray-500 cursor-not-allowed"
-          }`}
-        >
-          Proceed to Checkout
-        </button>
+  disabled={!eligibleForCheckout}
+  onClick={() => navigate("/checkout")}
+  className={`mt-6 w-full py-3 rounded-xl font-semibold ${
+    eligibleForCheckout
+      ? "bg-green-600 hover:bg-green-700 text-white"
+      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+  }`}
+>
+  Proceed to Checkout
+</button>
 
       </div>
 

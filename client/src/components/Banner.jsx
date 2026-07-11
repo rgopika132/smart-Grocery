@@ -1,36 +1,19 @@
 function Banner() {
   return (
-    <div
-      style={{
-        margin: "20px",
-        background: "linear-gradient(135deg,#2E7D32,#66BB6A)",
-        color: "white",
-        borderRadius: "20px",
-        padding: "25px",
-      }}
-    >
-      <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+    <div className="mx-5 mt-6 rounded-3xl bg-gradient-to-r from-green-700 to-green-500 text-white p-8">
+
+      <h2 className="text-3xl font-bold">
         Fresh Groceries
       </h2>
 
-      <p style={{ marginTop: "10px" }}>
-        Get all your daily essentials delivered to your doorstep.
+      <p className="mt-3 text-green-100">
+        Vegetables, Fish, Meat & Daily Essentials delivered to your doorstep.
       </p>
 
-      <button
-        style={{
-          marginTop: "20px",
-          padding: "12px 20px",
-          border: "none",
-          borderRadius: "10px",
-          background: "white",
-          color: "#2E7D32",
-          fontWeight: "bold",
-          cursor: "pointer",
-        }}
-      >
+      <button className="mt-6 bg-white text-green-700 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
         Shop Now
       </button>
+
     </div>
   );
 }

@@ -7,13 +7,20 @@ import PopularProducts from "../components/PopularProducts";
 
 function Home() {
   return (
-    <div style={{ background: "#f5f5f5", minHeight: "100vh" }}>
+    <div className="min-h-screen bg-gray-100">
+
       <Navbar />
+
       <SearchBar />
+
       <LocationCard />
+
       <Banner />
+
       <Categories />
+
       <PopularProducts />
+
     </div>
   );
 }
