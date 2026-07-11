@@ -1,9 +1,10 @@
 import { Bell, Menu, ShoppingCart } from "lucide-react";
 import appConfig from "../config/appConfig";
-
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 function Navbar() {
+  const navigate = useNavigate();
   const { cartItems } = useCart();
 
 const totalItems = cartItems.reduce(
@@ -40,7 +41,10 @@ const totalItems = cartItems.reduce(
 
   <Bell size={23} />
 
-  <div className="relative cursor-pointer">
+  <div
+  className="relative cursor-pointer"
+  onClick={() => navigate("/cart")}
+>
 
     <ShoppingCart size={25} />
 
